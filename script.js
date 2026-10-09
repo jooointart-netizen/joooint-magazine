@@ -1,0 +1,20 @@
+'use strict';
+const menu=document.querySelector('.menu');
+const nav=document.querySelector('.navlinks');
+menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));nav.classList.toggle('open',open);menu.textContent=open?'CLOSE':'MENU'});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='MENU'}));
+const cards=Array.from(document.querySelectorAll('.issue'));
+const filters=Array.from(document.querySelectorAll('.filter'));
+const more=document.querySelector('.more');
+const count=document.querySelector('.count');
+let filter='all',expanded=false;
+function update(){const selected=cards.filter(card=>filter==='all'||(filter==='recent'?Number(card.dataset.number)>=10:Number(card.dataset.number)<=9));cards.forEach(card=>{card.hidden=!selected.includes(card)||(!expanded&&selected.indexOf(card)>=8)});more.hidden=expanded||selected.length<=8;count.textContent=`${cards.filter(c=>!c.hidden).length} / ${selected.length} ISSUES`;}
+filters.forEach(button=>button.addEventListener('click',()=>{filter=button.dataset.filter;expanded=false;filters.forEach(b=>b.setAttribute('aria-pressed',String(b===button)));update()}));
+more.addEventListener('click',()=>{expanded=true;update()});update();
+const modal=document.querySelector('#issue-dialog');
+const close=document.querySelector('.close');
+let opener=null;
+document.querySelectorAll('[data-issue-open]').forEach(button=>button.addEventListener('click',()=>{opener=button;document.querySelector('.modal-img').src=button.dataset.image;document.querySelector('.modal-img').alt=button.dataset.title+' 表紙';document.querySelector('#modal-title').textContent=button.dataset.title;document.querySelector('#modal-credit').textContent=button.dataset.credit;document.querySelector('#modal-store').href=button.dataset.url;modal.showModal();document.body.classList.add('modal-open');close.focus()}));
+close.addEventListener('click',()=>modal.close());
+modal.addEventListener('click',e=>{if(e.target===modal){const rect=modal.getBoundingClientRect();if(e.clientX<rect.left||e.clientX>rect.right||e.clientY<rect.top||e.clientY>rect.bottom)modal.close()}});
+modal.addEventListener('close',()=>{document.body.classList.remove('modal-open');opener?.focus()});
