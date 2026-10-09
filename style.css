@@ -30,3 +30,13 @@
 @media(max-width:700px){.cover-stage .cover-window{max-width:275px}.modal-cover{max-width:calc(45dvh * 300 / 426)}.riso-grid{gap:26px;grid-template-columns:1fr}.riso-card>img{max-height:480px}.riso-caption h3{font-size:28px}.riso-end{align-items:flex-start;flex-direction:column;gap:10px}}
 
 .riso-card>.riso-artist{font:13px/1.7 var(--mono);color:#555;text-decoration:none;margin:9px 0 0}
+
+/* Original JOOOINT artwork, placed throughout the page. */
+.hero h1.hero-art-title{font-size:clamp(64px,7.2vw,112px);margin-bottom:30px}
+.graffiti-logo{width:100%;height:auto;mix-blend-mode:multiply;margin:0 0 28px}
+.hero-art-title .outline{font-size:.8em;letter-spacing:.015em}
+.about-art{width:min(100%,340px);height:auto;margin:36px auto 0;filter:invert(1);mix-blend-mode:screen}
+.store-visual{min-width:0}
+.store-art{width:min(100%,300px);height:auto;margin:0 auto 28px;mix-blend-mode:multiply}
+@media(max-width:1000px){.hero h1.hero-art-title{font-size:7.7vw}}
+@media(max-width:700px){.hero h1.hero-art-title{font-size:13.2vw}.graffiti-logo{margin-bottom:20px}.about-art{width:min(76%,290px);margin-top:28px}.store-art{width:min(72%,270px);margin:12px auto 28px}}
