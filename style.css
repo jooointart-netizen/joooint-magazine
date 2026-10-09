@@ -40,3 +40,7 @@
 .store-art{width:min(100%,300px);height:auto;margin:0 auto 28px;mix-blend-mode:multiply}
 @media(max-width:1000px){.hero h1.hero-art-title{font-size:7.7vw}}
 @media(max-width:700px){.hero h1.hero-art-title{font-size:13.2vw}.graffiti-logo{margin-bottom:20px}.about-art{width:min(76%,290px);margin-top:28px}.store-art{width:min(72%,270px);margin:12px auto 28px}}
+
+/* Black-background artwork supplied for the logo and store section. */
+.hero-art-title .graffiti-logo{mix-blend-mode:normal;margin:0;width:100%;height:auto}
+.store-art{mix-blend-mode:normal}
