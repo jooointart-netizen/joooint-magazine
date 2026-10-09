@@ -44,3 +44,8 @@
 /* Black-background artwork supplied for the logo and store section. */
 .hero-art-title .graffiti-logo{mix-blend-mode:normal;margin:0;width:100%;height:auto}
 .store-art{mix-blend-mode:normal}
+
+/* JOOOINT film in the featured hero position. */
+.film-stage{width:100%;max-width:360px;justify-self:center;background:#111;border:1px solid var(--ink);line-height:0}
+.hero-film{display:block;width:100%;height:auto;aspect-ratio:512 / 910;object-fit:contain}
+@media(max-width:700px){.film-stage{max-width:320px}}
