@@ -49,3 +49,18 @@
 .film-stage{width:100%;max-width:360px;justify-self:center;background:#111;border:1px solid var(--ink);line-height:0}
 .hero-film{display:block;width:100%;height:auto;aspect-ratio:512 / 910;object-fit:contain}
 @media(max-width:700px){.film-stage{max-width:320px}}
+
+/* Exhibition announcement. */
+.exhibition{background:#e5eef0;border-bottom:1px solid var(--line)}
+.exhibition .section-head h2{font-size:clamp(32px,4.7vw,64px);line-height:1.1;overflow-wrap:anywhere}
+.exhibition-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:7%;align-items:center}
+.exhibition-poster{display:block;max-width:440px;width:100%;justify-self:center}
+.exhibition-poster img{width:100%;height:auto}
+.exhibition-info{min-width:0}
+.exhibition-date{font:700 clamp(27px,3.3vw,46px)/1.5 var(--mono);letter-spacing:-1.5px;margin:0 0 30px}
+.exhibition-details{margin:0 0 32px}
+.exhibition-details div{border-top:1px solid #a5b5b9;padding:18px 0}
+.exhibition-details dt{font:13px var(--mono);margin-bottom:8px}
+.exhibition-details dd{font-size:18px;margin:0;overflow-wrap:anywhere}
+@media(min-width:701px) and (max-width:1150px){.navlinks{gap:10px;font-size:12px}.navlinks .shop{padding:9px 10px}}
+@media(max-width:700px){.exhibition{padding:45px 0}.exhibition-grid{grid-template-columns:1fr;gap:30px}.exhibition-poster{max-width:380px}.exhibition-date{font-size:clamp(24px,7vw,36px)}.exhibition-details dd{font-size:17px}}
