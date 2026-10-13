@@ -35,6 +35,10 @@
 #artist-chanyama .collab-gallery img{aspect-ratio:3/4;object-fit:contain;background:#fff}
 #artist-chanyama .collab-profile{grid-template-columns:minmax(0,1fr);max-width:860px}
 @media(max-width:700px){.collab-artist+.collab-artist{margin-top:48px;padding-top:38px}#chanyama-title{font-size:clamp(34px,9.5vw,64px)}}
+
+/* Show Onihime's paper edge-to-edge, removing the photo surround. */
+.chanyama-riso-frame{display:block;position:relative;overflow:hidden;aspect-ratio:992/1423;width:100%;background:#eee9d4}
+#artist-chanyama .collab-gallery .chanyama-riso-frame img{position:absolute;left:-27.621%;top:-2.952%;width:154.839%;height:107.941%;max-width:none;aspect-ratio:auto;object-fit:fill}
 </style></head>
 <body id="top"><a class="skip" href="#main">本文へ移動</a>
 <header class="masthead"><div class="wrap nav"><a class="brand" href="#top" aria-label="JOOOINT MAGAZINE ホーム">JOOOINT<span>MAGAZINE</span></a><button class="menu" aria-expanded="false" aria-controls="main-nav">MENU</button><nav class="navlinks" id="main-nav" aria-label="メインナビゲーション"><a href="#exhibition">EXHIBITION</a><a href="#archive">ARCHIVE</a><a href="#risograph">RISOGRAPH</a><a href="#artists">ARTISTS</a><a href="#stockists">取扱店</a><a href="#about">ABOUT</a><a href="https://instagram.com/joooint_mag/" target="_blank" rel="noopener noreferrer">INSTAGRAM</a><a href="https://x.com/JOOOINT_mag" target="_blank" rel="noopener noreferrer" aria-label="JOOOINTのXアカウント（新しいタブ）">X</a><a class="shop" href="https://joooint.stores.jp/" target="_blank" rel="noopener noreferrer">ONLINE STORE</a></nav></div></header>
@@ -78,7 +82,7 @@
 <article class="collab-artist" id="artist-chanyama" aria-labelledby="chanyama-title">
 <header class="collab-heading"><div><span class="section-label">RISOGRAPH COLLABORATION</span><h3 id="chanyama-title">chanyamaINK</h3><p class="collab-reading">チャンヤマ</p></div><p>chanyamaINK × JOOOINT<br>ストリートの感覚を、紙の上へ。</p></header>
 <div class="collab-gallery">
-<figure><a href="assets/chanyama-riso-onihime.svg" target="_blank" rel="noopener noreferrer" aria-label="chanyamaINK 鬼姫 リソグラフの写真を拡大（新しいタブ）"><img src="assets/chanyama-riso-onihime.svg" alt="chanyamaINKのリソグラフ作品「鬼姫」。ピンクとグリーン、黒の線と網点で描かれた鬼の女の子。" width="1200" height="1200" loading="lazy"></a><figcaption>鬼姫 / RISOGRAPH<br>chanyamaINK × JOOOINT · 写真をタップして拡大</figcaption></figure>
+<figure><a href="assets/chanyama-riso-onihime.svg" target="_blank" rel="noopener noreferrer" aria-label="chanyamaINK 鬼姫 リソグラフの写真を拡大（新しいタブ）"><span class="chanyama-riso-frame"><img src="assets/chanyama-riso-onihime.svg" alt="chanyamaINKのリソグラフ作品「鬼姫」。ピンクとグリーン、黒の線と網点で描かれた鬼の女の子。" width="1200" height="1200" loading="lazy"></span></a><figcaption>鬼姫 / RISOGRAPH<br>chanyamaINK × JOOOINT · 写真をタップして拡大</figcaption></figure>
 <figure><a href="assets/chanyama-cover-11.svg" target="_blank" rel="noopener noreferrer" aria-label="chanyamaINKが手がけたNO.11の表紙を拡大（新しいタブ）"><img src="assets/chanyama-cover-11.svg" alt="chanyamaINKが表紙を手がけたJOOOINT MAGAZINE NO.11。鬼姫とJOOOINTの文字を描いたモノクロ作品。" width="1055" height="1500" loading="lazy"></a><figcaption>JOOOINT MAGAZINE NO.11<br>Cover artwork by chanyamaINK · タップして拡大</figcaption></figure>
 </div>
 <div class="collab-profile"><div class="collab-bio">
